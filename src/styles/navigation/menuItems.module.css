@@ -1,0 +1,28 @@
+.navigationMenuItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.navigationMenuItems p {
+    font-size: 12px;
+    color: #1D1929;
+}
+
+.navigationMenuItems h1 {
+    background-color: #1D1929;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navigationMenuItems {
+        display: none;
+    }
+}

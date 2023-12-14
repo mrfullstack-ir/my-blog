@@ -1,0 +1,29 @@
+.headerContainer {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 38px;
+    margin-bottom: 48px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .col {
+        -ms-flex: 0 0 20%;
+        -webkit-box-flex: 0;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}

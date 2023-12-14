@@ -1,0 +1,11 @@
+.loaderContainer button {
+    font-family: "font-bold", sans-serif;
+    padding: 10px;
+    margin-top: 42px;
+    border: 1px solid #5E5C67;
+    background-color: unset;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    cursor: pointer;
+}

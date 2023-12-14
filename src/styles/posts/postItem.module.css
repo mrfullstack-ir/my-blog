@@ -1,0 +1,35 @@
+.postItemContainer {
+    width: 90%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.postItemContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.postItemContainer h6 {
+    padding-top: 10px;
+    font-size: 11px;
+    font-family: "font-thin", sans-serif;
+    color: #20222B;
+}
+
+.postItemContainer h1 {
+    font-family: "font-black", sans-serif;
+    font-size: 14px;
+    color: #1D1929;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.postItemContainer p {
+    font-family: "font-regular", sans-serif;
+    font-size: 12px;
+    color: #7F8391;
+}

@@ -1,0 +1,27 @@
+.searchContainer {
+    margin-top: 25px;
+}
+
+.searchContainer input {
+    font-family: "font-regular", sans-serif;
+    font-size: 9px;
+    text-align: center;
+    color: #1D1929;
+    padding: 9px 5px;
+    border-radius: 5px;
+    border: 1px solid #E9EAED;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 300px;
+}
+
+.searchContainer input::placeholder {
+    color: #E9EAED;
+}
+
+@media (max-width: 500px) {
+    .searchContainer input {
+        width: 100%;
+    }
+}

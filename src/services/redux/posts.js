@@ -1,0 +1,24 @@
+import {createSlice} from "@reduxjs/toolkit"
+
+export const setTicketsItems = createSlice({
+    name: "postsItems",
+    initialState: {
+        posts: [],
+        totalPosts: 0,
+        pagination: 1
+    },
+    reducers: {
+        updatePosts: (state, action) => {
+            state.posts = action.payload
+        },
+        updateTotalPosts: (state, action) => {
+            state.totalPosts = action.payload
+        },
+        updatePagination: (state, action) => {
+            state.pagination = action.payload
+        }
+    }
+})
+
+export const {updatePosts, updateTotalPosts, updatePagination} = setTicketsItems.actions
+export default setTicketsItems.reducer

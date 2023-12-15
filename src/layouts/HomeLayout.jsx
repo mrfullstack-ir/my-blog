@@ -6,7 +6,7 @@ export const HomeLayout = () => {
     return (
         <>
             <Navigation/>
-            <Header/>
+            <Header title="بلاگ"/>
             <Posts/>
         </>
     )

@@ -1,5 +1,6 @@
 import style from "../../styles/content/content.module.css"
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 export const Content = ({date, title, tags, cover, content}) => {
 
@@ -26,9 +27,11 @@ export const Content = ({date, title, tags, cover, content}) => {
                     {
                         tags.map(tag => {
                             return (
-                                <p>
-                                    {tag.name}
-                                </p>
+                                <Link to={"/tag/" + tag.slug}>
+                                    <p>
+                                        {tag.name}
+                                    </p>
+                                </Link>
                             )
                         })
                     }

@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit"
 
-export const setTicketsItems = createSlice({
+export const setPostsItems = createSlice({
     name: "postsItems",
     initialState: {
         posts: [],
@@ -20,5 +20,5 @@ export const setTicketsItems = createSlice({
     }
 })
 
-export const {updatePosts, updateTotalPosts, updatePagination} = setTicketsItems.actions
-export default setTicketsItems.reducer
+export const {updatePosts, updateTotalPosts, updatePagination} = setPostsItems.actions
+export default setPostsItems.reducer

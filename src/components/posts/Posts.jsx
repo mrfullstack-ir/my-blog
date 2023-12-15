@@ -19,6 +19,7 @@ export const Posts = () => {
                                     return (
                                         <div className={style.col} key={post.slug}>
                                             <PostItem
+                                                slug={post.slug}
                                                 title={post.title}
                                                 category={post.category}
                                                 cover={post.cover}

@@ -22,7 +22,6 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    cursor: pointer;
 }
 
 .tags p {
@@ -32,6 +31,7 @@
     font-size: 11px;
     padding: 5px 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .cover {

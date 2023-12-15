@@ -1,43 +1,44 @@
 import style from "../../styles/content/content.module.css"
+import {useEffect, useState} from "react";
 
-export const Content = () => {
+export const Content = ({date, title, tags, cover, content}) => {
+
+    const [persianDate, setPersianDate] = useState("");
+
+    useEffect(() => {
+        const persianDate = new Date(date);
+        const year = persianDate.toLocaleDateString('fa-IR', {year: 'numeric'});
+        const month = persianDate.toLocaleDateString('fa-IR', {month: 'long'});
+        const day = persianDate.toLocaleDateString('fa-IR', {day: 'numeric'});
+        setPersianDate(`نوشته شده در ${day} ${month} ${year}`)
+    }, []);
+
     return (
         <>
             <div className={style.contentHeader}>
                 <h6>
-                    نوشته شده در 30 آذر 1402
+                    {persianDate}
                 </h6>
                 <h1>
-                    هفت نکته مهم در طراحی دیتابیس
+                    {title}
                 </h1>
                 <div className={style.tags}>
-                    <p>
-                        دیتابیس
-                    </p>
-                    <p>
-                        پستگرس
-                    </p>
+                    {
+                        tags.map(tag => {
+                            return (
+                                <p>
+                                    {tag.name}
+                                </p>
+                            )
+                        })
+                    }
                 </div>
-                <img className={style.cover}
-                     src="https://api2.zoomit.ir/media/intel-core-ultra-meteor-lake-official-render-657b190b8412edb5a5b9851a?w=1920&q=75"
-                     alt=""/>
+                <img
+                    className={style.cover}
+                    src={cover}
+                    alt=""/>
             </div>
-            <div className={style.content}>
-                <p>
-                    شرکت اینتل، پلتفرم تاندربولت را در سال ۲۰۱۱ زمانی که هنوز USB 3.0 در اوج بود رونمایی می‌کند؛
-                    زمانی که USB 3.0 می‌توانسته با سرعت اطلاعات ۵ گیگابیت بر ثانیه اطلاعات را منتقل کند. با رونمایی
-                    از فناوری تاندربولت ۳، عدد مربوط به انتقال اطلاعات دو برابر یعنی ۱۰ گیگابیت بر ثانیه شد. با این
-                    حال، با استفاده از فناوری تاندربولت ۳ می‌توان طیف متنوعی از فایل‌ها را منتقل کرد.
-
-                    از طریق تاندربولت می‌توان فایل‌های ویدیویی را هم از طریق کابل به صفحه نمایش منتقل کرد. همچنین
-                    می‌توان دستگاه‌های مختلف را به یکدیگر متصل کرد. برای مثال شما می‌توانید هارد درایو خود را به
-                    کامپیوتر و یک صفحه نمایش را به هارد درایو متصل کنید. در واقع کانکتور مربوطه، به نوعی آینده‌ی این
-                    حوزه محسوب می‌شود.
-
-                    دو استاندارد تاندربولت ابتدایی برای کانکتورهای miniDisplayPort مورد استفاده قرار گرفت. با این
-                    حال، با صراحت می‌توان اعتراف کرد که این دو استاندارد چندان مشهور نشد اما بسیاری از صاحبان مک‌بوک
-                    که وفادار به اکوسیستم اپل باقی ماندند احتمالا هنوز این استانداردها را به خاطر دارند.
-                </p>
+            <div className={style.content} dangerouslySetInnerHTML={content}>
             </div>
         </>
     )

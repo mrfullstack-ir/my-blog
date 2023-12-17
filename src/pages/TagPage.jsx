@@ -15,7 +15,7 @@ export const TagPage = () => {
 
     useEffect(() => {
         async function runner() {
-            const data = await Promise.allSettled([getPosts({offset: 1, tag: slug}), getCategories()])
+            const data = await Promise.allSettled([getPosts({offset: 0, tag: slug}), getCategories()])
             if (data[0]?.value?.posts?.length > 0) {
                 dispatch(updatePagination(1))
                 dispatch(updatePosts(data[0].value.posts))

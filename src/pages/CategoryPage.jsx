@@ -15,7 +15,7 @@ export const CategoryPage = () => {
 
     useEffect(() => {
         async function runner() {
-            const data = await Promise.allSettled([getPosts({offset: 1, category: slug}), getCategories()])
+            const data = await Promise.allSettled([getPosts({offset: 0, category: slug}), getCategories()])
             if (data[0]?.value?.posts?.length > 0) {
                 dispatch(updatePagination(1))
                 dispatch(updatePosts(data[0].value.posts))

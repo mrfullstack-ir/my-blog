@@ -5,7 +5,7 @@ export const setPostsItems = createSlice({
     initialState: {
         posts: [],
         totalPosts: 0,
-        pagination: 1
+        pagination: 0
     },
     reducers: {
         updatePosts: (state, action) => {

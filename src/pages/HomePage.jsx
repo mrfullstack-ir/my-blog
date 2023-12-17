@@ -12,7 +12,8 @@ export const HomePage = () => {
 
     useEffect(() => {
         async function runner() {
-            const data = await Promise.allSettled([getPosts({offset: 1}), getCategories()])
+            const data = await Promise.allSettled([getPosts({offset: 0}), getCategories()])
+            console.log(data)
             dispatch(updatePosts(data[0].value.posts))
             dispatch(updateTotalPosts(data[0].value.totalPosts))
             dispatch(updateCategories(data[1].value))

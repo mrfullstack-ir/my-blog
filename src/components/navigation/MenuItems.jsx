@@ -12,7 +12,7 @@ export const MenuItems = () => {
                 {
                     categories.map(category => {
                         return (
-                            <Link to={"/category/" + category.slug}>
+                            <Link to={"/category/" + category.id}>
                                 <p>
                                     {category.name}
                                 </p>
@@ -20,7 +20,7 @@ export const MenuItems = () => {
                         )
                     })
                 }
-                <Link to="/">
+                <Link to="">
                     <h1>رزومه من</h1>
                 </Link>
             </div>

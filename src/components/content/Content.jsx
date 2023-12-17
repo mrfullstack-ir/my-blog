@@ -27,7 +27,7 @@ export const Content = ({date, title, tags, cover, content}) => {
                     {
                         tags.map(tag => {
                             return (
-                                <Link to={"/tag/" + tag.slug}>
+                                <Link to={"/tag/" + tag.id}>
                                     <p>
                                         {tag.name}
                                     </p>

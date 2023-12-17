@@ -11,7 +11,7 @@ export const LoaderButton = () => {
     async function getPostsFunction() {
         const newPagination = pagination + 1
         dispatch(updatePagination(newPagination))
-        const {posts: newPosts} = await getPosts(pagination * 10)
+        const {posts: newPosts} = await getPosts({offset: pagination * 10})
         const data = [...posts, ...newPosts]
         dispatch(updatePosts(data))
     }

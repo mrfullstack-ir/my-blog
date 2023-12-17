@@ -15,6 +15,7 @@ const getContent = async (slug) => {
         if (data[0]._embedded["wp:term"][1]) {
             content.tags = data[0]._embedded["wp:term"][1].map(tag => {
                 return {
+                    id: tag.id,
                     name: tag.name,
                     slug: tag.slug
                 }

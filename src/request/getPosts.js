@@ -1,7 +1,7 @@
 import {url} from "../config/server";
 
-const getPosts = async (offset = 1) => {
-    const response = await fetch(url + "/wp-json/wp/v2/posts?_embed&offset=" + offset)
+const getPosts = async ({offset = 1, tag = "", category = "",search = ""}) => {//url + "/wp-json/wp/v2/posts?_embed&offset=" + offset
+    const response = await fetch(`${url}/wp-json/wp/v2/posts?_embed&offset=${offset}${tag.length > 0 ? "&tags=" + tag : ""}${category.length > 0 ? "&categories=" + category : ""}${search.length > 0 ? "&search=" + search : ""}`)
     const data = await response.json()
     const posts = data.map(post => {
         return {

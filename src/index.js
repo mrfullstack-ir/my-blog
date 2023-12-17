@@ -8,6 +8,8 @@ import "./styles/app/fonts.css"
 import "./styles/app/flexbox.css"
 import {HomePage} from "./pages/HomePage";
 import {PostPage} from "./pages/PostPage";
+import {TagPage} from "./pages/TagPage";
+import {CategoryPage} from "./pages/CategoryPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
     {
         path: "/post/:slug",
         element: <PostPage/>
+    },
+    {
+        path: "/tag/:slug",
+        element: <TagPage/>
+    },
+    {
+        path: "/category/:slug",
+        element: <CategoryPage/>
     }
 ])
 

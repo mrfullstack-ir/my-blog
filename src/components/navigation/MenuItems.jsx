@@ -20,7 +20,7 @@ export const MenuItems = () => {
                         )
                     })
                 }
-                <Link to="">
+                <Link to="https://mrfullstack.ir/wp-content/uploads/2023/12/karboom-resume-رزومه-1-محمد-سعید-روح-بخش-jdelvj-standard.pdf">
                     <h1>رزومه من</h1>
                 </Link>
             </div>
